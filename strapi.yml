@@ -21,4 +21,6 @@ services:
       - MONGO_INITDB_DATABASE=strapi
     ports:
       - 27017:27017
+    volumes:
+      - /data/db
     restart: always
