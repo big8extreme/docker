@@ -16,9 +16,6 @@ services:
       - HOST=localhost
     ports:
       - 1337:1337
-    volumes:
-      - ./strapi-app:/usr/src/api/strapi-app
-      #- /usr/src/api/strapi-app/node_modules
     depends_on:
       - db
     restart: always
@@ -29,6 +26,4 @@ services:
       - MONGO_INITDB_DATABASE=strapi
     ports:
       - 27017:27017
-    volumes:
-      - ./db:/data/db
     restart: always
